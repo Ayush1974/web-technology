@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+    </head>
+    <style>
+        *{
+        margin: 0px;
+        padding: 0px;}
+        .text-success{
+            background-color: green;
+        }
+        #firstContainer{
+            background-color:red;
+        }
+        
+        #click{
+            border: 1px solid blue;
+           padding: 3px; 
+           margin-left: 75px;
+        }
+        .container{
+            border: 5px solid black;
+            padding: 50px;
+            margin: 12px;
+        }
+    </style>
+<body>
+    <p align="center" style="border: 1px solid red"><b>This is a javascript project</b></p>
+<div class="container" >
+<button id="click" onclick="clicked()">CLICKME</button>
+<p>Hello world</p>
+</div>
+<div class="container" id="firstContainer">
+    <p align="center"> this is a paragraph</p>
+</div>
+<script>
+        
+var var1=10;
+var var2=5;
+console.log(var1+var2);
+var str1="hello",str2=" world";
+console.log(str1+str2);
+var pi=3.14;
+var radius=5;
+console.log("area:",pi*radius*radius);
+var t=true;
+var f=false;
+console.log("choose any one :",t,f);
+var x=undefined;
+console.log(x);
+var y=null;
+console.log(y);
+var m=[1,2,"ayush",3,4];
+console.log(m);
+console.log(m[0]);
+var a={
+    ayush:100,
+    sun:90,
+    king:80
+}
+console.log(a);
+var a=15,b=20;
+console.log("a+b=",a+b);
+console.log("a-b=",a-b);
+console.log("a*b=",a*b);
+console.log("a/b=",a/b);
+console.log("and");
+console.log(true&&true);
+console.log(true&&false);
+console.log(false&&true);
+console.log(false&&false);
+console.log("or");
+console.log(true||true);
+console.log(true||false);
+console.log(false||false);
+console.log(false||true);
+console.log("not");
+console.log(!true);
+console.log(!false);
+function cgpa(a,b){
+    return (a+b)/2;
+}
+console.log("CGPA of Aman& Rahul:");
+c1=cgpa(98,90);
+c2=cgpa(94,96);
+console.log(c1,c2);
+var age=19;
+if(age>18)
+{
+    console.log("You can drink Rasna Water.");
+}
+else{
+    console.log("You cannot drink Rasna Water.");
+}
+console.log("for");
+for(var i=0;i<m.length;i++)
+{
+    console.log(m[i]);
+}
+var j=0;
+console.log("While");
+
+// while(j<m.length){
+//     console.log(m[j]);
+//     j++;
+// }
+// var k=0;
+// console.log("do-while");
+// do{
+//     console.log(m[k]);
+//     k++;
+// }while(k<m.length);
+
+for(var j=0;j<m.length;j++)
+{
+    if(m[j]==2){
+    continue;}
+    else if(j==4)
+    {break;} 
+    else
+    console.log(m[j]);
+}
+let arr=[1,2,"hero"];
+arr.pop();
+console.log(arr);
+arr.push("hi");
+console.log(arr);
+arr.shift();
+console.log(arr);
+arr.unshift("hola");
+console.log(arr);
+arr.toString();
+console.log(arr);
+arr.sort();
+console.log(arr);
+let str="Ayush is a good good boy";
+console.log(str.length);
+console.log(str.indexOf("good"));
+console.log(str.lastIndexOf("good"));
+console.log(str.slice(1,3));
+let d=str.replace("Ayush","Aman");
+console.log(d,str);
+d=d.replace("good","very");
+console.log(d);
+console.log("Date:"+Date());
+mydate=new Date();
+console.log(mydate);
+console.log("Time:"+mydate.getTime());
+console.log("Full year:",mydate.getFullYear());
+console.log("Full month:"+mydate.getMonth());
+console.log("Full day:"+mydate.getDay());
+console.log("Time:"+mydate.getHours()+":"+mydate.getMinutes()+":"+mydate.getSeconds()+"."+mydate.getMilliseconds());
+console.log("1.>   Document object Model:-");
+let elem =document.getElementById('click');
+console.log(elem);
+let elemclass =document.getElementsByClassName("container");
+console.log(elemclass);
+elemclass[0].style.backgroundColor="yellow";
+// elemclass.classList.add("container2");
+// console.log(elemclass);
+elemclass[0].classList.add("text-sucess");
+tn = document.getElementsByTagName('div');
+console.log(tn);
+createdElement=document.createElement('p');
+createdElement.innerText="This is a created paragraph.";
+createdElement2=document.createElement('b');
+createdElement2.innerText="This is a created paragraph.";
+tn[0].appendChild(createdElement);
+tn[0].replaceChild(createdElement2, createdElement);
+sel=document.querySelector('.container');
+console.log(sel);
+sel=document.querySelectorAll('.container');
+console.log(sel);
+function clicked() {
+    console.log('The button was clicked.');
+}
+window.onload=function() {
+    console.log('The document was loaded.');
+}
+
+firstContainer.addEventListener('click',function() { console.log('clicked on container.');})  
+firstContainer.addEventListener('mouseover',function() { console.log('mouse on container.');})
+firstContainer.addEventListener('mouseout',function() { console.log('mouse out of container.');})
+// let prevHTML= document.querySelectorAll(container)[1].innerHTML; 
+// firstContainer.addEventListener('mouseup',function() {document.querySelectorAll('container')[1].innerHTML=prevHTML; console.log('mouse up of container.');})
+// firstContainer.addEventListener('mousedown',function() {document.querySelectorAll('container')[1].innerHTML="<b>We have clicked</b>";  console.log('mouse down container.');})
+// firstContainer.addEventListener('mousehover',function() { console.log('mouse hover on container.');})
+// json 
+obj={name: "Ayush", length:1, a: {this: "that"}}
+jso=JSON.stringify(obj);
+console.log(jso);
+parsed=JSON.parse(`{"name":"Ayush","length":1,"a":{"this":"that"}}`)
+ console.log(parsed);
+ var a=24;
+ console.log(`this is my ${a}`);
+</script>
+</html>

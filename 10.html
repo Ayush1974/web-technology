@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> clock </title>
+<!-- <script> 
+// let a;
+// let str;
+// a=new Date();
+// str="Time:"+a.getHours()+":"+a.getMinutes()+":"+a.getSeconds();
+let str;
+setInterval(()=>{
+    a=new Date();
+ str=a.getHours()+":"+a.getMinutes()+":"+a.getSeconds();
+    console.log(str);
+    document.getElement(`str`);
+},1000);
+</script> -->
+<style> 
+ #bg{
+     margin:150px;
+     padding: 100px;
+     height: 150px;
+     border: 3px solid cyan;
+     background-color: lightblue;
+     color: red;
+ }
+
+ </style>
+</head>
+<body> 
+    <h1 align="center"style="border: 1px solid black"> CLOCK </h1>
+    <p id="bg">
+        <script> 
+            // let a;
+            // let str;
+            // a=new Date();
+            // str="Time:"+a.getHours()+":"+a.getMinutes()+":"+a.getSeconds();
+            let str;
+            setInterval(()=>{
+                a=new Date();
+             str=a.getHours()+":"+a.getMinutes()+":"+a.getSeconds();
+                console.log(str);
+            document.getElementById("bg").innerHTML = str;
+            },1000);
+            </script>
+    </p>
+</body>
+</html>
